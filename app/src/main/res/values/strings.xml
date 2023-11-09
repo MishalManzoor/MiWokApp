@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MiWok App</string>
+    <string name="one">one</string>
+    <string name="lutti">lutti</string>
+    <string name="images">images</string>
+    <string name="numbers">Numbers</string>
+    <string name="family_members">Family</string>
+    <string name="colors">Colors</string>
+    <string name="phrases">Phrases</string>
+    <string name="play">TODO</string>
+    <string name="play1">TODO</string>
+    <string name="p">p</string>
+</resources>
