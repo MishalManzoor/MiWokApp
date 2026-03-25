@@ -36,26 +36,7 @@ public class Numbers_Actvity extends AppCompatActivity {
     }
 
     public void addDataInList(ArrayList<word> words){
-        words.add(new word("one", "lutti", R.drawable.number_one,
-                R.raw.number_one));
-        words.add(new word("two", "otiiko", R.drawable.number_two,
-                R.raw.number_two));
-        words.add(new word("three", "tolookosu", R.drawable.number_three,
-                R.raw.number_three));
-        words.add(new word("four", "oyyisa", R.drawable.number_four,
-                R.raw.number_four));
-        words.add(new word("five", "massokka", R.drawable.number_five,
-                R.raw.number_five));
-        words.add(new word("six", "temmokka", R.drawable.number_six,
-                R.raw.number_six));
-        words.add(new word("seven", "kenekaku", R.drawable.number_seven,
-                R.raw.number_seven));
-        words.add(new word("eight", "kawinta", R.drawable.number_eight,
-                R.raw.number_eight));
-        words.add(new word("nine", "wo'e", R.drawable.number_nine,
-                R.raw.number_nine));
-        words.add(new word("ten", "na'aacha", R.drawable.number_ten,
-                R.raw.number_ten));
+      /*...*/
 
     }
 
@@ -71,18 +52,7 @@ public class Numbers_Actvity extends AppCompatActivity {
             word word = words.get(position);
 
 //media will run when audio focus will REQUEST_GRANTED
-            int result = audioManager.requestAudioFocus(listener, AudioManager.STREAM_MUSIC,
-                    AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-            if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-
-                mediaPlayer = MediaPlayer.create(Numbers_Actvity.this, word.getAudio());
-                mediaPlayer.start();
-
-                mediaPlayer.setOnCompletionListener(onCompletionListener);
-
-            }
-
+            /*...*/
         });
     }
 
