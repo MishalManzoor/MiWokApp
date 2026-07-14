@@ -78,7 +78,6 @@ public class Numbers_Actvity extends AppCompatActivity {
 
     }
 
-    //Audio focus listener
     private final AudioManager.OnAudioFocusChangeListener listener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
@@ -97,8 +96,7 @@ public class Numbers_Actvity extends AppCompatActivity {
             }
         }
     };
-
-    //this is also a callback once are activity resume this will execute
+    
     @Override
     protected void onStop() {
         super.onStop();
@@ -106,17 +104,5 @@ public class Numbers_Actvity extends AppCompatActivity {
         releaseResources();
     }
 }
-
-
-//        int index = 0;
-//        while (index < words.size()) {
-//
-//            TextView view = new TextView(this);
-//            view.setText(words.get(index));
-//            linearLayout.addView(view);
-//
-//            index++;
-//        }
-
 //        ArrayAdapter<word> adapter = new ArrayAdapter<>(this, R.layout.list_item, words);
 //        listView.setAdapter(adapter);
