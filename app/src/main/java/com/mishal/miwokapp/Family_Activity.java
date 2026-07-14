@@ -14,10 +14,7 @@ public class Family_Activity extends AppCompatActivity {
 
     ListView listView;
     private MediaPlayer mediaPlayer;
-    //audio manager class for audio focus
     private AudioManager audioManager;
-
-    //we create an global variable for the listener
     MediaPlayer.OnCompletionListener onCompletionListener = mp -> releaseResources();
 
     @Override
@@ -26,7 +23,7 @@ public class Family_Activity extends AppCompatActivity {
         setContentView(R.layout.words_list);
 
         listView = findViewById(R.id.listView);
-        //get services
+ 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<word> words = new ArrayList<>();
@@ -54,28 +51,17 @@ public class Family_Activity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Clean up the media player by releasing its resources.
-     */
     public void releaseResources() {
 
-        // If the media player is not null, then it may be currently playing a sound.
         if (mediaPlayer != null) {
 
-            // Regardless of the current state of the media player, release its resources
-            // because we no longer need it.
             mediaPlayer.release();
-
-            // Set the media player back to null. For our code, we've decided that
-            // setting the media player to null is an easy way to tell that the media player
-            // is not configured to play an audio file at the moment.
             mediaPlayer = null;
             audioManager.abandonAudioFocus(listener);
         }
 
     }
 
-    //Audio focus listener
     private final AudioManager.OnAudioFocusChangeListener listener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
@@ -95,7 +81,6 @@ public class Family_Activity extends AppCompatActivity {
         }
     };
 
-    //this is also a callback once are activity resume this will execute
     @Override
     protected void onStop() {
         super.onStop();
