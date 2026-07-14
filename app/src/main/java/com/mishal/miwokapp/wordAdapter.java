@@ -18,12 +18,9 @@ public class wordAdapter extends ArrayAdapter<word> {
 
     private final int colorActivity;
 
-    // invoke the suitable constructor of the ArrayAdapter class
     public wordAdapter(@NonNull Context context, ArrayList<word> arrayList,
                        int colorResourceId) {
 
-        // pass the context and arrayList for the super
-        // constructor of the ArrayAdapter class
         super(context, 0, arrayList);
         colorActivity = colorResourceId;
     }
@@ -42,8 +39,6 @@ public class wordAdapter extends ArrayAdapter<word> {
                             parent, false);
         }
 
-        // get Position
-        // build in method getItem(--)
         word currentNumberOfPosition = getItem(position);
 
         TextView miWork = listView.findViewById(R.id.miWork);
